@@ -6,15 +6,15 @@ try{
     const response = await fetch(`https://camping-gear-api.herokuapp.com/api/${sleepingBagName}`)
     const data = await response.json();
 
-    document.getElementById('bagName').innerText = data.bagname[0]
-    document.getElementById('brand').innerText = data.bagbrand[0]
-    document.getElementById('price').innerText = data.price[0]
-    document.getElementById('temp').innerText = data.temprating[0]
-    document.getElementById('gender').innerText = data.gender[0]
-    document.getElementById('fill').innerText = data.fill[0]
-    document.getElementById('weight').innerText = data.weight[0]
-    document.getElementById('dimensions').innerText = data.dimensions[0]
-    document.getElementById('bestUse').innerText = data.bestuse[0]
+    document.getElementById('bagName').innerText = data[0].bagname
+    document.getElementById('brand').innerText = data[0].bagbrand
+    document.getElementById('price').innerText = data[0].price
+    document.getElementById('temp').innerText = data[0].temprating
+    document.getElementById('gender').innerText = data[0].gender
+    document.getElementById('fill').innerText = data[0].fill
+    document.getElementById('weight').innerText = data[0].weight
+    document.getElementById('dimensions').innerText = data[0].dimensions
+    document.getElementById('bestUse').innerText = data[0].bestuse
     console.log(data)
 
 } catch(error) {
