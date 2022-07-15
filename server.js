@@ -31,22 +31,13 @@ document.getElementById('weight').innerText = data[0].weight
 document.getElementById('dimensions').innerText = data[0].dimensions
 document.getElementById('bestUse').innerText = data[0].bestuse
 
-
+// make sure I get back data
 console.log(data)
-}
 
-    
 let resultsEl = document.getElementById("bag-list");
 let resetBtn = document.getElementById("clear-results");
 let clearField = document.getElementById('input-field')
-// let populateBtn = document.getElementById("populate");
-
-// let resultData = [
-//   {"name": "Filipe", "color": "Brown"},
-//   {"name": "Bruno", "color": "Red"},
-//   {"name": "Tasha", "color": "Pink"},
-//   {"name": "Sarah", "color": "Blue"},
-// ];
+let populateBtn = document.getElementById("find-item");
 
 // // When reset button is clicked, clear the results list
 resetBtn.addEventListener('click', function() {
@@ -55,11 +46,14 @@ resetBtn.addEventListener('click', function() {
     console.log ("Results reset");  
     }
 );
+populateBtn.addEventListener("click", function() {
+    data.forEach(addResultToPage);
+    console.log ("Results populated");
+  });
+  
+  function addResultToPage(result) {
+       resultsEl.insertAdjacentHTML("afterbegin", "<li><Sleeping bag name:</b> " + data.bagname + ", " +
+          "<b>Brand:</b> " + data.bagbrand + "</li>");
+    }
 
-// populateBtn.addEventListener("click", function() {
-//   resultData.forEach(function(result) {
-//      resultsEl.insertAdjacentHTML("afterbegin", "<li><b>Name:</b> " + result.name + ", " +
-//         "<b>Color:</b> " + result.color + "</li>");
-//   });
-//   console.log ("Results populated");
-// });
+}
