@@ -2,7 +2,7 @@ body {
     background-color: rgb(222, 255, 196);
 }
 
-.find-item {
+.find-item, .clear-results {
     background-color: rgb(17, 66, 23);
     color: white;
     font-size: 1rem;
