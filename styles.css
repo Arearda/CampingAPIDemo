@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
 body {
-    background-color: rgb(222, 255, 196);
+    background-color: #064929;
+    color: white;
 }
 
 .find-item, .clear-results {
@@ -8,4 +11,23 @@ body {
     font-size: 1rem;
     margin: 5px;
     padding: 5px;
+}
+
+h1 {
+    font-family: 'Neucha', cursive;
+    font-size: 2rem;
+}
+
+.heading { 
+    text-align: center;
+    margin: 10px;
+}
+
+.heading img {
+    max-width: 40%;
+}
+
+.list-options, .search-box {
+    margin: 0.25rem;
+    padding: 0.25rem;
 }

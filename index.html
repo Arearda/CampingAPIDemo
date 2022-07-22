@@ -8,22 +8,37 @@
     <title>Camping API Demo</title>
 </head>
 <body>
-    <h1>Sleeping Bag Finder</h1>
+    <section class="heading">
+    <img src="images/Gear-Check!-logo/cover.png">
+    <h1>Your Camp Gear Finder</h1>
+    </section>
+    <section class="list-options">
+    <label for="camp-gear">Find me a:</label>
+    <select id="gear" name="gear">
+        <option value="sleeping-bags">Sleeping Bag</option>
+        <option value="tents">Tent</option>
+        <option value="backpacks">Backpack</option>
+        <option value="sleeping-pads">Sleeping Pad</option>
+    </select>
+    </section>
+    <br>
+    <section class="list-options">
+    <label for="search-for">Search By:</label>
+    <select id="search-by" name="search-by">
+        <option value="brand">Brand</option>
+        <option value="weight">Weight</option>
+        <option value="best-use">Best Use</option>
+        <option value="price">Price</option>
+    </select>
+    </section>
+    <section class="search-box">
     <p>Brand: <input type="text" class="input-field" id="input-field"></p>
     <br>
     <button id="find-item" class="find-item">Find Item</button>
     <button class="clear-results" id="clear-results">Clear</button>
     	<ul class="bag-list" id="bag-list">
-        <li><span>Sleeping bag name: </span><span id="bagName"></span></li>
-        <li><span>Brand: </span><span id="brand"></span></li>
-        <li><span>Price: </span><span id="price"></span></li>
-        <li><span>Temp Rating: </span><span id="temp"></span></li>
-        <li><span>Gender Specification: </span><span id="gender"></span></li>
-        <li><span>Fill: </span><span id="fill"></span></li>
-        <li><span>Weight: </span><span id="weight"></span></li>
-        <li><span>Dimensions: </span><span id="dimensions"></span></li>
-        <li><span>Best Use: </span><span id="bestUse"></span></li>
     </ul>
+    </section>
     <script src = 'server.js'></script>
 </body>
 </html>
